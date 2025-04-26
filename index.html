@@ -2,55 +2,127 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>irina todo contigo atr ya sabe ñeri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irina Todo Contigo</title>
   <style>
     body {
-      background-color: #ffe6f0;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding: 50px;
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWcybGdjbTB0eDdjNWI5MGpqdHNzbW81Mnh2Y3VsNDhsazU1MW41MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/SGAh7OmkAtJHQvtzb8/giphy.gif'); /* GIF de fondo */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 100px;
     }
 
     h1 {
-      color: #d6336c;
+      text-align: center;
+      color: #FF1493;
+      font-size: 3em;
+      margin-top: 20px;
+      transition: color 0.5s ease;
+    }
+
+    h1:hover {
+      color: #FFD700;
+    }
+
+    p {
+      text-align: center;
+      font-size: 36px; /* Tamaño de fuente aumentado */
+      color: #FF69B4;
+      margin-top: 20px;
+      text-shadow: 2px 2px 5px white; /* Contorno blanco alrededor del texto */
+      transition: color 0.3s ease; /* Para transiciones suaves */
+    }
+
+    p:hover {
+      color: #FFD700; /* Cambia el color al pasar el mouse */
     }
 
     button {
-      background-color: #ff4d88;
-      color: white;
-      padding: 15px 25px;
       font-size: 20px;
+      padding: 10px 20px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      margin-top: 20px;
+      display: block;
+      margin: 30px auto;
+      transition: background-color 0.3s ease;
     }
 
-    .contador {
-      font-size: 24px;
-      margin-top: 20px;
-      color: #99004d;
+    /* Botón "Foto de mi bichote" */
+    #carpinchoBtn {
+      background-color: #FF66B2; /* Rosa suave */
+      color: white;
+    }
+
+    #carpinchoBtn:hover {
+      background-color: #FF1493; /* Rosa más intenso */
+    }
+
+    /* Botón "La mujer más linda del mundo" */
+    #mujerBtn {
+      background-color: #FF7F7F; /* Color rojo suave */
+      color: white;
+    }
+
+    #mujerBtn:hover {
+      background-color: #FF1493; /* Rosa intenso */
+    }
+
+    #contador {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 10px;
+      color: #FFD700;
     }
   </style>
 </head>
 <body>
 
-  <h1>irina me gustas más que la chocolatada ❤️</h1>
-  <p>quiero que sepas que mis ganas de dormir ya no me van a ganar 😝💸</p>
+  <h1>Irina, Todo Contigo ❤️</h1> <!-- Corazón añadido a "Irina, Todo Contigo" -->
+  <p>Quiero que sepas que mis ganas de dormir ya no me van a ganar 😜💵</p> <!-- Contorno blanco alrededor del texto -->
 
-  <button onclick="sumarAmor()">pum coso pere</button>
-  <div class="contador" id="contador">0 veces</div>
+  <button onclick="mostrarMensaje()">Pum coso pere</button>
+
+  <div id="contador">0</div>
+
+  <button id="carpinchoBtn" onclick="verCarpinchos()">Foto de mi bichote</button>
+
+  <!-- Nuevo botón para "La mujer más linda del mundo" -->
+  <button id="mujerBtn" onclick="verDedoSeñalando()">La mujer más linda del mundo 😲</button>
+
+  <audio autoplay loop hidden>
+    <source src="TU_ARCHIVO_DE_MUSICA_AQUI.mp3" type="audio/mpeg"> <!-- Cambia este link -->
+    Tu navegador no soporta audio HTML5.
+  </audio>
 
   <script>
     let contador = 0;
+    let yaMostroMensaje = false;
 
-    function sumarAmor() {
+    function mostrarMensaje() {
       contador++;
-      document.getElementById('contador').innerText = contador + ' veces';
+      document.getElementById("contador").textContent = contador;
+
+      if (!yaMostroMensaje) {
+        alert("Te quiero ❤️"); // Mensaje cambiado a "Te quiero ❤️"
+        yaMostroMensaje = true;
+      }
+    }
+
+    function verCarpinchos() {
+      window.open("https://www.google.com/search?hl=es&tbm=isch&q=carpinchos", "_blank"); // Busqueda en imágenes de carpinchos
+    }
+
+    // Función para abrir la búsqueda de "dedo señalando a ti" en imágenes
+    function verDedoSeñalando() {
+      window.open("https://www.google.com/search?hl=es&tbm=isch&q=dedo+señalando+a+ti", "_blank"); // Busqueda en imágenes de dedo señalando a ti
     }
   </script>
 
 </body>
 </html>
-
-
