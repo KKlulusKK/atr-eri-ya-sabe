@@ -99,7 +99,7 @@
   </audio>
   
   <!-- Botón para activar la música -->
-  <button onclick="playAudio()">Iniciar música 🎶</button>
+  <button id="playMusicBtn" onclick="playAudio()">Iniciar música 🎶</button>
 
   <script>
     let contador = 0;
@@ -130,8 +130,10 @@
     function playAudio() {
       const audio = document.getElementById('audioPlayer');
       audio.play();
+      document.getElementById('playMusicBtn').style.display = 'none'; // Oculta el botón después de que la música inicie
     }
   </script>
 
 </body>
 </html>
+
