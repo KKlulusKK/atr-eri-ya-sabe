@@ -93,15 +93,19 @@
   <button id="mujerBtn" onclick="verDedoSeñalando()">La mujer más linda del mundo 😲</button>
 
   <!-- 🎵 Música de fondo: Taylor Swift - Enchanted -->
-  <audio autoplay loop hidden>
+  <audio id="audioPlayer" hidden>
     <source src="https://github.com/KKlulusKK/atr-eri-ya-sabe/raw/refs/heads/main/Taylor%20Swift%20-%20Enchanted.mp3" type="audio/mpeg">
     Tu navegador no soporta audio HTML5.
   </audio>
+  
+  <!-- Botón para activar la música -->
+  <button onclick="playAudio()">Iniciar música 🎶</button>
 
   <script>
     let contador = 0;
     let yaMostroMensaje = false;
 
+    // Función para mostrar el mensaje y aumentar el contador
     function mostrarMensaje() {
       contador++;
       document.getElementById("contador").textContent = contador;
@@ -112,12 +116,20 @@
       }
     }
 
+    // Función para abrir la búsqueda de carpinchos
     function verCarpinchos() {
       window.open("https://www.google.com/search?hl=es&tbm=isch&q=carpinchos", "_blank");
     }
 
+    // Función para abrir la búsqueda de dedo señalando
     function verDedoSeñalando() {
       window.open("https://www.google.com/search?hl=es&tbm=isch&q=dedo+señalando+a+ti", "_blank");
+    }
+
+    // Función para iniciar la música
+    function playAudio() {
+      const audio = document.getElementById('audioPlayer');
+      audio.play();
     }
   </script>
 
