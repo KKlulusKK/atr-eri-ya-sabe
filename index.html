@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Irina Todo Contigo</title>
   <style>
     body {
@@ -10,11 +10,11 @@
       color: white;
       margin: 0;
       padding: 0;
-      background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWcybGdjbTB0eDdjNWI5MGpqdHNzbW81Mnh2Y3VsNDhsazU1MW41MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/SGAh7OmkAtJHQvtzb8/giphy.gif'); /* GIF de fondo */
+      background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWcybGdjbTB0eDdjNWI5MGpqdHNzbW81Mnh2Y3VsNDhsazU1MW41MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/SGAh7OmkAtJHQvtzb8/giphy.gif');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      margin-top: 100px;
+      margin-top: 150px;
     }
 
     h1 {
@@ -31,15 +31,15 @@
 
     p {
       text-align: center;
-      font-size: 36px; /* Tamaño de fuente aumentado */
+      font-size: 36px;
       color: #FF69B4;
       margin-top: 20px;
-      text-shadow: 2px 2px 5px white; /* Contorno blanco alrededor del texto */
-      transition: color 0.3s ease; /* Para transiciones suaves */
+      text-shadow: 2px 2px 5px white;
+      transition: color 0.3s ease;
     }
 
     p:hover {
-      color: #FFD700; /* Cambia el color al pasar el mouse */
+      color: #FFD700;
     }
 
     button {
@@ -53,24 +53,22 @@
       transition: background-color 0.3s ease;
     }
 
-    /* Botón "Foto de mi bichote" */
     #carpinchoBtn {
-      background-color: #FF66B2; /* Rosa suave */
+      background-color: #FF66B2;
       color: white;
     }
 
     #carpinchoBtn:hover {
-      background-color: #FF1493; /* Rosa más intenso */
+      background-color: #FF1493;
     }
 
-    /* Botón "La mujer más linda del mundo" */
     #mujerBtn {
-      background-color: #FF7F7F; /* Color rojo suave */
+      background-color: #FF7F7F;
       color: white;
     }
 
     #mujerBtn:hover {
-      background-color: #FF1493; /* Rosa intenso */
+      background-color: #FF1493;
     }
 
     #contador {
@@ -83,8 +81,8 @@
 </head>
 <body>
 
-  <h1>Irina, Todo Contigo ❤️</h1> <!-- Corazón añadido a "Irina, Todo Contigo" -->
-  <p>Quiero que sepas que mis ganas de dormir ya no me van a ganar 😜💵</p> <!-- Contorno blanco alrededor del texto -->
+  <h1>Irina, Todo Contigo ❤️</h1>
+  <p>Quiero que sepas que mis ganas de dormir ya no me van a ganar 😜💵</p>
 
   <button onclick="mostrarMensaje()">Pum coso pere</button>
 
@@ -92,11 +90,11 @@
 
   <button id="carpinchoBtn" onclick="verCarpinchos()">Foto de mi bichote</button>
 
-  <!-- Nuevo botón para "La mujer más linda del mundo" -->
   <button id="mujerBtn" onclick="verDedoSeñalando()">La mujer más linda del mundo 😲</button>
 
+  <!-- 🎵 Música de fondo: Taylor Swift - Enchanted -->
   <audio autoplay loop hidden>
-    <source src="TU_ARCHIVO_DE_MUSICA_AQUI.mp3" type="audio/mpeg"> <!-- Cambia este link -->
+    <source src="https://github.com/KKlulusKK/atr-eri-ya-sabe/raw/refs/heads/main/Taylor%20Swift%20-%20Enchanted.mp3" type="audio/mpeg">
     Tu navegador no soporta audio HTML5.
   </audio>
 
@@ -109,18 +107,17 @@
       document.getElementById("contador").textContent = contador;
 
       if (!yaMostroMensaje) {
-        alert("Te quiero ❤️"); // Mensaje cambiado a "Te quiero ❤️"
+        alert("Te quiero ❤️");
         yaMostroMensaje = true;
       }
     }
 
     function verCarpinchos() {
-      window.open("https://www.google.com/search?hl=es&tbm=isch&q=carpinchos", "_blank"); // Busqueda en imágenes de carpinchos
+      window.open("https://www.google.com/search?hl=es&tbm=isch&q=carpinchos", "_blank");
     }
 
-    // Función para abrir la búsqueda de "dedo señalando a ti" en imágenes
     function verDedoSeñalando() {
-      window.open("https://www.google.com/search?hl=es&tbm=isch&q=dedo+señalando+a+ti", "_blank"); // Busqueda en imágenes de dedo señalando a ti
+      window.open("https://www.google.com/search?hl=es&tbm=isch&q=dedo+señalando+a+ti", "_blank");
     }
   </script>
 
